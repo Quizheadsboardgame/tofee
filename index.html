@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRUE OR FALSE: EASY EDITION</title>
+    <title>TRUE OR FALSE: ADULT EDITION</title>
     <style>
         * {
             margin: 0;
@@ -97,7 +97,7 @@
 
 <div id="quiz-container">
     <img id="logo" src="https://i.imgur.com/cyZ0Z21.png" alt="George Michael Logo">
-    <h1>TRUE OR FALSE: EASY EDITION</h1>
+    <h1>TRUE OR FALSE: ADULT EDITION</h1>
     <div id="question-container">
         <div class="question" id="question">Loading question...</div>
         <div class="answer" id="answer">Loading answer...</div>
@@ -108,17 +108,113 @@
 <script>
     // Question and answers data
     const quizData = [
-        { question: 'The sky is blue.', answer: 'True' },
-        { question: 'Dogs can fly.', answer: 'False' },
-        { question: 'Water boils at 100 degrees Celsius.', answer: 'True' },
-        { question: 'The capital of France is Berlin.', answer: 'False' },
+        { question: 'The estimated global population of the Earth is over 8 billion, which is significantly larger than the estimated number of grains of sand on all the beaches combined.', answer: 'True' },
+        { question: 'There are more stars in the universe than grains of sand on all the beaches on Earth.', answer: 'True' },
+        { question: 'Whales are mammals, not fish.', answer: 'True' },
+        { question: 'The boiling point of water is higher than 100 degrees Celsius at sea level.', answer: 'True' },
+        { question: 'The Amazon rainforest produces more than 20% of the world’s oxygen.', answer: 'True' },
+        { question: 'Goldfish have a three-second memory.', answer: 'False' },
+        { question: 'Venus is the closest planet to the Sun.', answer: 'False' },
+        { question: 'The Great Wall of China is visible from space.', answer: 'False' },
+        { question: 'Pluto is classified as a planet.', answer: 'False' },
+        { question: 'Humans can hibernate like bears.', answer: 'False' },
+        { question: 'The speed of light is faster than the speed of sound.', answer: 'True' },
+        { question: 'The longest river in the world is the Nile.', answer: 'True' },
+        { question: 'Diamonds are made from compressed coal.', answer: 'False' },
+        { question: 'The Earth’s core is made of solid iron.', answer: 'False' },
+        { question: 'Jupiter has the most moons in our solar system.', answer: 'True' },
+        { question: 'The Sahara Desert is the largest desert in the world.', answer: 'False' },
+        { question: 'Antarctica is the largest desert in the world.', answer: 'True' },
+        { question: 'The Statue of Liberty was a gift from France to England.', answer: 'False' },
+        { question: 'Lightning never strikes the same place twice.', answer: 'False' },
+        { question: 'Mount Everest is the tallest mountain above sea level.', answer: 'True' },
+        { question: 'The Mona Lisa is a painting by Vincent van Gogh.', answer: 'False' },
+        { question: 'The human brain stops growing after childhood.', answer: 'False' },
+        { question: 'All snowflakes have six sides.', answer: 'True' },
+        { question: 'The coldest temperature ever recorded on Earth was in Antarctica.', answer: 'True' },
+        { question: 'The Pacific Ocean is the largest ocean on Earth.', answer: 'True' },
+        { question: 'The human body has more than 200 bones.', answer: 'False' },
+        { question: 'There are more than 100 billion galaxies in the observable universe.', answer: 'True' },
+        { question: 'The Pyramids of Giza were built by slaves.', answer: 'False' },
+        { question: 'Bees can see all colors except red.', answer: 'True' },
+        { question: 'The speed of sound is faster in water than in air.', answer: 'True' },
+        { question: 'Mercury is the hottest planet in our solar system.', answer: 'True' },
+        { question: 'Octopuses have three hearts.', answer: 'True' },
+        { question: 'Mount Kilimanjaro is the tallest mountain in Africa.', answer: 'True' },
+        { question: 'All cacti are found in deserts.', answer: 'False' },
+        { question: 'Earth is the only planet in the solar system with liquid water on its surface.', answer: 'True' },
+        { question: 'The Great Wall of China is the longest man-made structure in the world.', answer: 'True' },
+        { question: 'Bananas grow on trees.', answer: 'False' },
+        { question: 'The first living organisms appeared on Earth approximately 4 billion years ago.', answer: 'True' },
+        { question: 'The Bermuda Triangle is located in the Pacific Ocean.', answer: 'False' },
+        { question: 'The Eiffel Tower was originally intended to be a temporary structure.', answer: 'True' },
+        { question: 'The northern lights are only visible from the North Pole.', answer: 'False' },
+        { question: 'The capital of Australia is Sydney.', answer: 'False – It’s Canberra' },
+        { question: 'The Great Barrier Reef is the world’s largest coral reef system.', answer: 'True' },
+        { question: 'Marie Curie discovered radium.', answer: 'True' },
+        { question: 'The Declaration of Independence was signed in 1776.', answer: 'True' },
+        { question: 'The Battle of Waterloo was fought in 1812.', answer: 'False – It was fought in 1815' },
+        { question: 'Shakespeare wrote “Romeo and Juliet” in the 16th century.', answer: 'True' },
         { question: 'The human body has 206 bones.', answer: 'True' },
-        { question: 'A square has 5 sides.', answer: 'False' },
-        { question: 'Bananas grow on trees.', answer: 'False. They grow on large herbaceous plants.' },
-        { question: 'Sharks are mammals.', answer: 'False' },
-        { question: 'Venus is the closest planet to the Sun.', answer: 'False. Mercury is.' },
-        { question: 'There are seven continents on Earth.', answer: 'True' }
+        { question: 'The French Revolution began in 1789.', answer: 'True' },
+        { question: 'The ozone layer protects the Earth from ultraviolet radiation.', answer: 'True' },
+        { question: 'The Bill of Rights consists of 10 amendments to the United States Constitution.', answer: 'True' },
+        { question: 'The Eiffel Tower is located in London.', answer: 'False – It’s in Paris' },
+        { question: 'The atomic bomb was dropped on Hiroshima and Nagasaki during World War II.', answer: 'True' },
+        { question: 'The Nile River is the longest river in the world.', answer: 'True' },
+        { question: 'Leonardo da Vinci painted the Mona Lisa.', answer: 'True' },
+        { question: 'The metric system is based on multiples of 10.', answer: 'True' },
+        { question: 'Mount Kilimanjaro is the highest mountain in Africa.', answer: 'True' },
+        { question: 'The first moon landing occurred in 1969.', answer: 'True' },
+        { question: 'The Statue of Liberty was a gift from France to the United States.', answer: 'True' },
+        { question: 'Albert Einstein developed the theory of relativity.', answer: 'True' },
+        { question: 'The Titanic sank on its maiden voyage.', answer: 'True' },
+        { question: 'The Great Wall of China was built in a single year.', answer: 'False' },
+        { question: 'Bees are responsible for pollinating one-third of the food we eat.', answer: 'True' },
+        { question: 'Cows have four stomachs.', answer: 'False – They have one stomach with four compartments.' },
+        { question: 'The longest bone in the human body is the femur.', answer: 'True' },
+        { question: 'The largest mammal in the world is the blue whale.', answer: 'True' },
+        { question: 'Cheetahs are the fastest land animals.', answer: 'True' },
+        { question: 'A day on Venus is longer than a year on Venus.', answer: 'True' },
+        { question: 'Bananas are berries.', answer: 'True' },
+        { question: 'The capital of Italy is Rome.', answer: 'True' },
+        { question: 'Humans share 60% of their DNA with bananas.', answer: 'True' },
+        { question: 'Caffeine is a drug that is found in coffee, tea, and chocolate.', answer: 'True' },
+        { question: 'The heart of a shrimp is located in its head.', answer: 'True' },
+        { question: 'An octopus has eight legs.', answer: 'True' },
+        { question: 'Crocodiles cannot stick their tongue out.', answer: 'True' },
+        { question: 'Wombat poop is cube-shaped.', answer: 'True' },
+        { question: 'Koalas are marsupials.', answer: 'True' },
+        { question: 'Lobsters communicate by peeing at each other.', answer: 'True' },
+        { question: 'A group of flamingos is called a “flamboyance.”', answer: 'True' },
+        { question: 'Penguins are found in the Arctic.', answer: 'False – They are found in the Antarctic.' },
+        { question: 'Starfish have brains.', answer: 'False – They have a nervous system but no brain.' },
+        { question: 'Humans are the only animals that blush.', answer: 'True' },
+        { question: 'The human nose can detect over 1 trillion different scents.', answer: 'True' },
+        { question: 'You cannot taste food without saliva.', answer: 'True' },
+        { question: 'You are more likely to be bitten by a human than by a shark.', answer: 'True' },
+        { question: 'It takes 8 minutes and 20 seconds for light from the Sun to reach the Earth.', answer: 'True' },
+        { question: 'Sharks are fish.', answer: 'True' },
+        { question: 'Banging your head against a wall burns 150 calories an hour.', answer: 'True' },
+        { question: 'A goldfish can live for up to 10 years.', answer: 'True' },
+        { question: 'The average person will spend six months of their life waiting for red lights to turn green.', answer: 'True' },
+        { question: 'The average person will eat eight spiders while sleeping in their lifetime.', answer: 'False' }
     ];
+
+    // Shuffle questions randomly
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // Randomly select the starting question
+    function startQuiz() {
+        shuffleArray(quizData); // Shuffle questions
+        currentQuestion = Math.floor(Math.random() * quizData.length); // Random starting question
+        showQuestion();
+    }
 
     let currentQuestion = 0;
 
@@ -159,8 +255,8 @@
         }, 500);
     }
 
-    // Show the first question on page load
-    showQuestion();
+    // Start the quiz on page load
+    startQuiz();
 </script>
 
 </body>
